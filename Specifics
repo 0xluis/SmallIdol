@@ -1,0 +1,35 @@
+[LOBBY SCREEN]
+
+Settings
+
+- # of players (more like room capacity, can range from 2-8 including host, default is 4)
+    - If # of players is 4+, up to 2 players can choose the same production
+    
+- Team play (don't worry about this yet, just an idea for now)
+
+- Turn order (janken, or host's decision. default janken)
+
+- # of playable idols (minimum = 3(# of players) - 2, maximum = however many idols we've coded in)
+      Players Min # of idols
+      2 4
+      3 7
+      4 10
+      5 13
+      6 16
+      7 19
+      8 22
+      
+- Time limit (None, Slow, Normal, Fast, Blitz)
+  Things with an "x" time limit
+    - Production Selection
+    - Idol Selection
+    - Schedule Phase (choosing whether to take a flight, hell train, promote, retire, etc)
+    - Redeployment Phase
+  Things with a "2x" time limit
+    - Promotion Phase
+    x = ...
+    Blitz = 15 seconds
+    Fast = 30
+    Normal = 45
+    Slow = 60
+    None = infinite
