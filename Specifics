@@ -1,23 +1,22 @@
-[LOBBY SCREEN]
+[[LOBBY SCREEN]]
 
-Settings
+[SETTINGS]
 
 - # of players (more like room capacity, can range from 2-8 including host, default is 4)
-    - If # of players is 4+, up to 2 players can choose the same production
     
 - Team play (don't worry about this yet, just an idea for now)
 
-- Turn order (janken, or host's decision. default janken)
+- Turn order (janken, or host's decision. default host decision until janken becomes a thing, or just make RNG)
 
 - # of playable idols (minimum = 3(# of players) - 2, maximum = however many idols we've coded in)
-      Players Min # of idols
-      2 4
-      3 7
-      4 10
-      5 13
-      6 16
-      7 19
-      8 22
+      Players       Min # of idols
+      2             4
+      3             7
+      4             10
+      5             13
+      6             16
+      7             19
+      8             22
       
 - Time limit (None, Slow, Normal, Fast, Blitz)
   Things with an "x" time limit
@@ -33,3 +32,39 @@ Settings
     Normal = 45
     Slow = 60
     None = infinite
+
+[[GAMEPLAY]]
+
+[PRODUCTION SELECTION RULES]
+
+    - Chosen in turn order
+    - If playing with 5-8 people, up to 2 people can choose the same production
+
+[IDOL SELECTION RULES]
+
+    - Base price of an idol is 500
+    - Prices are reduced by 100 every time a new unit is recruited
+    - Idol prices are not reduced until after the buying player locks in his unit
+    - New idols do not fill in the vacancies of recruited idols until after the buying player locks in his unit
+    - Prices go down to a minimum of 100
+    - New idols are decided randomly (a recently retired idol has an equal chance of appearing as an idol that has never appeared)
+
+[AFK RULEs]
+
+If player times out during...
+- Production Selection
+        Will pass his turn and choose last
+        If he passed once/is already last, enter votekick
+        If votekick succeeds, player is removed from game
+- Idol Selection
+        Will pass his turn and debut next turn
+        Second time, enter votekick
+        If votekick succeeds, player is removed from game
+        Any active pieces are retired
+        However, the player will continue to make money off of his pieces (and even possibly win the game)
+- Scheduling Phase
+        Automatically enter Redeployment Phase
+- Promotion Phase
+        Automatically enter Redeployment Phase
+- Redeployment Phase
+        Any unused tokens are distributed with priority given to the prefectures with the least territory, and randomly afterwards
