@@ -5,19 +5,23 @@ class player
 {
 	private:
 		unsigned char id;
-		unsigned int cash;
+		int cash;
 		//idol idols [3];
 		unsigned char numberOfMarkers;
 		//Markers* playerMarkers;
 		//void copyMarkers();
 	public:
+		player();
+		player(unsigned char playerId, int playerCash, unsigned char playerMarkers);
 		void setId(unsigned char playerId);
-		void setCash(unsigned int cashmoneyswag);
+		void setCash(int cashmoneyswag);
 		//void setIdols(Idol* playerIdols);
-		//void addMarkers(unsigned char addMarkers);
+		void setMarkers(unsigned char markers);
+		
 		unsigned char getId();
-		unsigned int getCash();
+		int getCash();
+		unsigned char getMarkers();
 		//Idol* getIdols();
-}
+};
 	
 #endif

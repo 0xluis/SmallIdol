@@ -1,14 +1,19 @@
 #ifndef MARKER_H
 #define MARKER_H
-class markers
+
+#include<iostream>
+
+class marker
 {
 	private:
-		unsigned char location;
-		unsigned char neighbors;
-		void getNeighbors();
+		std::string location;
+		
 	public:
-		unsigned char getLocation();
-		void setChar();
-}
+		marker();
+		marker(std::string location);
+		void setLocation(std::string newLocation);
+		std::string getLocation();
+		
+};
 
 #endif
