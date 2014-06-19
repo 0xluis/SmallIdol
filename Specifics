@@ -54,6 +54,8 @@
     - First promotion can take place anywhere on main island of Japan
     - Each promotion that follows must be adjacent to an already occupied prefecture
     - Player can choose to reinforce an already occupied prefecture
+    - Player cannot move tokens once he has placed them
+    - If a player runs out of tokens or does not have enough to occupy any available prefectures (with/without Appeal), automatically enter redeployment
 
 [AFK RULEs]
 
